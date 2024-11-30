@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>List 출력 예제(th:switch)</h1>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>홀/짝</th>
+                <th>상품명</th>
+                <th>상품설명</th>
+                <th>가격</th>
+                <th>재고량</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="item , status: ${item}">
+                <td th:text="${item.id}"></td>
+                <td th:switch="${status.even}">
+                    <span th:case="true">짝수</span>
+                    <span th:case="false">홀수</span>
+                </td>
+                <td th:text="${item.itemNm}"></td>
+                <td th:text="${item.itemDetail}"></td>
+                <td th:text="${item.price}"></td>
+                <td th:text="${item.stockNumber}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+  name: ResumeHong
+
+  devtools:
+    livereload:
+      enabled: true #Reloading
+    restart:
+      enabled: true #Restarting
+
+  thymeleaf:
+    cache: false #Disable cache
+
+
+  #MySQL Connection(MySql)
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/resumehong
+      username: root
+      password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+  security:
+    user:
+      name: test
+      password: 1234
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+
+itemImgLocation: /Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/item  #Directory for Server usage(File Save)
+uploadPath: file:////Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/    #URL for Client Access
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
