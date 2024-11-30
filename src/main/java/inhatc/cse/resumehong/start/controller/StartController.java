@@ -18,6 +18,6 @@ public class StartController {
 //
 //        model.addAttribute("data", startDto);
 
-        return "temp/temp";
+        return "./page/join";
     }
 }

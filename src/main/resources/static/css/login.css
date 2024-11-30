@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.LoginForm {
+  width: 450px;
+  height: 250px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.LoginForm > p {
+  color: #74aeff;
+  margin-bottom: 10px;
+}
+
+.EmailInput {
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/Child.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+
+.PwInput {
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/password.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+
+.submit {
+  width: 100%;
+}
+
+.TxtBox {
+  width: 100%;
+  margin-top: 20px;
+}
+.TxtBox > p {
+  font-size: 14px;
+  float: left;
+  margin-right: 5px;
+}
+
+.TxtBox > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: green;
+}

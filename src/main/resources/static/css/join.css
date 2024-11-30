@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.JoinForm {
+  width: 350px;
+  height: 450px;
+  margin: 20px auto;
+}
+
+.JoinForm > form > p {
+  color: #74aeff;
+  margin-bottom: 10px;
+}
+
+.EmailInput {
+  position: relative;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/Email.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+.PwInput {
+  width: 48%;
+  font-size: 15px;
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/password.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+  float: left;
+  margin-right: 12px;
+}
+
+.PwCheckInput {
+  width: 48%;
+  font-size: 15px;
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/password.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+  float: left;
+}
+
+.JoinForm > form > p:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+.NameInput {
+  position: relative;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/Name.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+
+.gender-buttons > label {
+  display: block;
+  width: 48%;
+  float: left;
+  margin: 10px 0px;
+  margin-right: 6px;
+}
+
+.AddressInput {
+  position: relative;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/Address.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+
+.PhoneInput {
+  position: relative;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding-left: 40px;
+  background-image: url("../images/Phone.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px 24px;
+}
+
+.submit {
+  width: 100%;
+}

@@ -14,13 +14,12 @@ spring:
   thymeleaf:
     cache: false #Disable cache
 
-
   #MySQL Connection(MySql)
   datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/resumehong
-      username: root
-      password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/resume
+    username: root
+    password: 1111
 
   jpa:
     hibernate:
@@ -44,8 +43,8 @@ spring:
       max-file-size: 20MB
       max-request-size: 100MB
 
-itemImgLocation: /Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/item  #Directory for Server usage(File Save)
-uploadPath: file:////Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/    #URL for Client Access
+itemImgLocation: /Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/item #Directory for Server usage(File Save)
+uploadPath: file:////Users/tommyhong/IdeaProjects/A_ban/seokminshopdata/ #URL for Client Access
 
 logging:
   level:

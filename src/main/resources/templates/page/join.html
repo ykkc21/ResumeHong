@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <!-- 부트스트랩 적용 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Join css -->
+    <link rel="stylesheet" th:href="@{/css/join.css}">
+
+</head>
+
+<body>
+    <div class="shadow-sm p-3 mb-5 bg-body rounded JoinForm">
+        <form action="#">
+            <p>회원가입</p>
+            <input class="form-control EmailInput" name="email" type="email" placeholder="이메일"
+                aria-label="default input example">
+            <input class="form-control PwInput" type="password" name="password" placeholder="비밀번호"
+                aria-label="default input example">
+            <input class="form-control PwCheckInput" type="password" placeholder="비밀번호 확인"
+                aria-label="default input example">
+
+            <p>개인정보</p>
+            <input class="form-control NameInput" type="text" name="name" placeholder="이름"
+                aria-label="default input example">
+            <div class="gender-buttons">
+                <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off">
+                <label class="btn btn-outline-primary" for="male">남자</label>
+
+                <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="female">여자</label>
+            </div>
+            <input class="form-control AddressInput" type="text" name="address" placeholder="주소"
+                aria-label="default input example">
+            <input class="form-control PhoneInput" type="text" name="phone" placeholder="전화번호 (-) 빼고 입력"
+                aria-label="default input example">
+            <input class="btn btn-primary submit" type="submit" value="회원가입">
+
+        </form>
+    </div>
+</body>
+
+</html>
