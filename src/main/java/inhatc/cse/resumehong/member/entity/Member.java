@@ -37,6 +37,10 @@ public class Member extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private Role role;          //UserRole
 
+    private String phone;
+
+    private String gender;
+
     public static Member createMember(MemberDto memberDto, PasswordEncoder passwordEncoder) {
 
         Member member = Member.builder()
@@ -45,6 +49,8 @@ public class Member extends BaseEntity {
                 .password(passwordEncoder.encode(memberDto.getPassword()))
                 .address(memberDto.getAddress())
                 .role(Role.USER)
+                .phone(memberDto.getPhone())
+                .gender(memberDto.getGender())
                 .build();
 
         return member;

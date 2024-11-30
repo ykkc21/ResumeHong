@@ -29,5 +29,12 @@ public class MemberDto {
     @NotEmpty(message = "주소는 필수항목 입니다.")
     private String address;     //UserAddress
 
+    @NotBlank(message = "전화번호는 필수항목 입니다.")
+    @Length(max = 13, message = "올바른 전화번호를 입력해주세요.")
+    private String phone;
+
+    @NotBlank(message = "성별은 필수항목 입니다.")
+    private String gender;
+
 
 }
