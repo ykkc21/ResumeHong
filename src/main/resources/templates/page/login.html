@@ -12,19 +12,49 @@
 </head>
 
 <body>
-    <div class="shadow-sm p-3 mb-5 bg-body rounded LoginForm">
+    <div class="shadow-sm p-3 mb-5 bg-body rounded LoginFormBox">
         <p>로그인</p>
-        <form action="#">
-            <input class="form-control EmailInput" name="email" type="email" placeholder="이메일"
+        <form action="#" id="loginForm">
+            <input class="form-control EmailInput" id="userEmail" type="email" placeholder="이메일"
                 aria-label="default input example">
-            <input class="form-control PwInput" type="password" name="password" placeholder="비밀번호"
+            <input class="form-control PwInput" id="userPw" type="password" placeholder="비밀번호"
                 aria-label="default input example">
-            <input class="btn btn-primary submit" type="submit" value="로그인">
+            <input class="btn btn-primary submit" id="submitBtn" type="submit" value="로그인">
         </form>
         <div class="TxtBox">
-            <p>아직 회원이 아니신가요?</p> <a href="#">가입하기</a>
+            <p>아직 회원이 아니신가요?</p> <a href="join.html">가입하기</a>
         </div>
     </div>
+
+    <script>
+
+        const form = document.getElementById("loginForm");
+        const userEmailInput = document.getElementById("userEmail");
+        const userPwInput = document.getElementById("userPw");
+        const submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const userEmail = userEmailInput.value.trim();
+            const userPw = userPwInput.value.trim();
+
+            console.log(userEmail, userPw)
+
+            if (!userEmail) {
+                userEmailInput.placeholder = "* 이메일를 확인해주세요!"
+                userEmailInput.style.setProperty("color", "red")
+            }
+            if (!userPw) {
+                userPwInput.placeholder = "* 비밀번호를 확인해주세요!"
+                userPwInput.style.setProperty("--placeholder-color", "red")
+            }
+
+            form.submit();
+
+        })
+
+    </script>
 </body>
 
 </html>

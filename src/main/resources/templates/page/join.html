@@ -14,34 +14,87 @@
 </head>
 
 <body>
-    <div class="shadow-sm p-3 mb-5 bg-body rounded JoinForm">
-        <form action="#">
+    <div class="shadow-sm p-3 mb-5 bg-body rounded JoinFormBox">
+        <form action="#" id="JoinForm">
             <p>회원가입</p>
-            <input class="form-control EmailInput" name="email" type="email" placeholder="이메일"
+            <input class="form-control EmailInput" id="EmailInput" type="email" placeholder="이메일"
                 aria-label="default input example">
-            <input class="form-control PwInput" type="password" name="password" placeholder="비밀번호"
+            <input class="form-control PwInput" id="PwInput" type="password" placeholder="비밀번호"
                 aria-label="default input example">
-            <input class="form-control PwCheckInput" type="password" placeholder="비밀번호 확인"
+            <input class="form-control PwCheckInput" id="PwCheckInput" type="password" placeholder="비밀번호 확인"
                 aria-label="default input example">
 
             <p>개인정보</p>
-            <input class="form-control NameInput" type="text" name="name" placeholder="이름"
+            <input class="form-control NameInput" id="NameInput" type="text" placeholder="이름"
                 aria-label="default input example">
             <div class="gender-buttons">
-                <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off">
+                <input type="radio" class="btn-check" name="gender" id="male" value="남자" autocomplete="off">
                 <label class="btn btn-outline-primary" for="male">남자</label>
 
-                <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off">
+                <input type="radio" class="btn-check" name="gender" id="female" value="여자" autocomplete="off">
                 <label class="btn btn-outline-secondary" for="female">여자</label>
             </div>
-            <input class="form-control AddressInput" type="text" name="address" placeholder="주소"
+            <input class="form-control AddressInput" id="AddressInput" type="text" placeholder="주소"
                 aria-label="default input example">
-            <input class="form-control PhoneInput" type="text" name="phone" placeholder="전화번호 (-) 빼고 입력"
+            <input class="form-control PhoneInput" id="PhoneInput" type="text" placeholder="전화번호 (-) 빼고 입력"
                 aria-label="default input example">
             <input class="btn btn-primary submit" type="submit" value="회원가입">
 
         </form>
-    </div>
+
+        <script>
+            const form = document.getElementById("JoinForm");
+            const emailInput = document.getElementById("EmailInput");
+            const pwInput = document.getElementById("PwInput");
+            const pwCheckInput = document.getElementById("PwCheckInput");
+            const nameInput = document.getElementById("NameInput");
+            const genderInputs = document.getElementsByName("gender");
+            const addressInput = document.getElementById("AddressInput");
+            const phoneInput = document.getElementById("PhoneInput");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // 값 가져오기
+                const email = emailInput.value.trim();
+                const password = pwInput.value.trim();
+                const passwordCheck = pwCheckInput.value.trim();
+                const name = nameInput.value.trim();
+                const address = addressInput.value.trim();
+                const phone = phoneInput.value.trim();
+
+                let gender = null;
+                for (const input of genderInputs) {
+                    if (input.checked) {
+                        gender = input.value;
+                        break;
+                    }
+                }
+
+                // 값 출력 (개발용)
+                console.log("Email:", email);
+                console.log("Password:", password);
+                console.log("Password Check:", passwordCheck);
+                console.log("Name:", name);
+                console.log("Gender:", gender);
+                console.log("Address:", address);
+                console.log("Phone:", phone);
+
+                // 간단한 유효성 검사
+                if (!email || !password || !passwordCheck || !name || !gender || !address || !phone) {
+                    alert("모든 필드를 입력해주세요.");
+                    return;
+                }
+
+                if (password !== passwordCheck) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    return;
+                }
+
+
+
+            })
+        </script>
 </body>
 
 </html>
